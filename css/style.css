@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "TeletextOTF";
+  src: url("../fonts/font.otf") format("opentype");
+  font-display: swap;
+}
+
+:root {
+  --bg: #07080b;
+  --panel: #0a0d12;
+  --glass: rgba(255, 255, 255, 0.04);
+  --glow: rgba(120, 220, 255, 0.12);
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: radial-gradient(1200px 700px at 50% 35%, #101423 0%, var(--bg) 55%, #000 100%);
+  color: #d7e7ff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+.wrap {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.crt-shell {
+  position: relative;
+  width: min(960px, 96vw);
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(180deg, #0c1220 0%, #05070c 100%);
+  border-radius: 22px;
+  box-shadow:
+    0 20px 70px rgba(0, 0, 0, 0.75),
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+    0 0 120px rgba(90, 200, 250, 0.07);
+  overflow: hidden;
+  padding: 14px;
+}
+
+#crt {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 16px;
+  background: #000;
+
+  /* keep pixels crisp */
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+
+  /* CRT-ish “fizz” */
+  filter:
+    contrast(1.18)
+    saturate(1.08)
+    brightness(1.02)
+    drop-shadow(0 0 18px var(--glow));
+
+  outline: none;
+}
+
+.crt-overlay {
+  position: absolute;
+  inset: 14px;
+  border-radius: 16px;
+  pointer-events: none;
+}
+
+/* scanlines */
+.scanlines {
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.00) 0px,
+      rgba(0, 0, 0, 0.00) 2px,
+      rgba(0, 0, 0, 0.10) 3px,
+      rgba(0, 0, 0, 0.10) 4px
+    );
+  mix-blend-mode: multiply;
+  opacity: 0.55;
+}
+
+/* subtle vignette */
+.vignette {
+  background: radial-gradient(closest-side at 50% 50%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.45) 100%);
+  opacity: 0.9;
+}
+
+/* glass sheen */
+.glass {
+  background:
+    linear-gradient(120deg, rgba(255,255,255,0.05), rgba(255,255,255,0.00) 40%),
+    radial-gradient(700px 240px at 50% 0%, rgba(255,255,255,0.06), rgba(255,255,255,0.00) 60%);
+  opacity: 0.55;
+}
+
+.hint {
+  margin-top: 18px;
+  opacity: 0.65;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}

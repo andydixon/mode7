@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<link rel="preload" href="./fonts/font.otf" as="font" type="font/otf" crossorigin>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mode 7. A horror story.</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="crt-shell" aria-label="Teletext CRT">
+      <!-- tabindex allows focus; also helps on some browsers for key capture -->
+      <canvas id="crt" tabindex="0"></canvas>
+
+      <!-- purely visual overlays (scanlines/noise/glow) -->
+      <div class="crt-overlay scanlines" aria-hidden="true"></div>
+      <div class="crt-overlay vignette" aria-hidden="true"></div>
+      <div class="crt-overlay glass" aria-hidden="true"></div>
+    </div>
+
+    <footer class="hint" aria-hidden="true">
+    </footer>
+  </main>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
