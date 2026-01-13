@@ -916,10 +916,11 @@ if (t - this._cursorLastToggle >= this._cursorBlinkMs) { // If it is time to bli
     c.fillStyle = this._backdropOn ? this.bg : "#0b0d12"; // Backdrop colour
     c.fillRect(0, 0, this.canvas.width, this.canvas.height); // Fill background
 
-    // Slight jitter increases with pressure, but remains subtle. // Note
-    const p = this._pressure; // Pressure
-    const j = Math.floor((Math.random() - 0.5) * (1 + p * 1.2)); // Jitter in pixels
-    const k = Math.floor((Math.random() - 0.5) * (1 + p * 1.2)); // Jitter in pixels
+    // Slight jitter increases with pressure; almost none at the start. // Note
+    const p = this._pressure ?? 0; // Pressure (0..1)
+    const jitterAmp = 0.7 + p * 2.0; // Jitter amplitude grows with pressure
+    const j = Math.round((Math.random() - 0.5) * jitterAmp); // Horizontal jitter in pixels
+    const k = Math.round((Math.random() - 0.5) * jitterAmp); // Vertical jitter in pixels
 
     // Simulated RGB split (very light). // Note
     const split = 1 + Math.floor(p * 1.0); // Split grows slightly with pressure
