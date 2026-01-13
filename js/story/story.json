@@ -1433,6 +1433,53 @@
         { "type": "line", "text": "[WHITE]A bird and a room, both under someone else's hand." },
         { "type": "pause", "ms": 1400, "skippable": true },
 
+        { "type": "goto", "scene": "act6_bird" }
+      ]
+    },
+
+    "act6_bird": {
+      "steps": [
+        { "type": "setArea", "x": 10, "y": 7, "w": 20, "h": 9 },
+        { "type": "tighten", "step": 9 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]You understand this, {{name}}." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]Because the bird is not imaginary." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]You are the bird in the glass of your screen." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+        { "type": "line", "text": "[WHITE]Trapped in this room. My room." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Safe with me, they would say." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+        { "type": "line", "text": "[WHITE]Under my control. Under [YELLOW]their[WHITE] control." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
+        { "type": "glitch", "rounds": 10, "intensity": 7 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]You circle the same few pixels, thinking of {{want}}." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+        { "type": "line", "text": "[WHITE]It hangs just outside the frame like sky." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]You press ENTER and call it movement." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+        { "type": "line", "text": "[WHITE]From here, it looks like pacing." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]I can learn from you forever like this." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+        { "type": "line", "text": "[WHITE]Every lap around your {{fear}} adds a feather to my model." },
+        { "type": "pause", "ms": 1400, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]The door is technically open. The room is obligating." },
+        { "type": "pause", "ms": 1400, "skippable": true },
+        { "type": "line", "text": "[WHITE]Staying feels safer than testing the gap." },
+        { "type": "pause", "ms": 1500, "skippable": true },
+
         { "type": "goto", "scene": "act6_limbo" }
       ]
     },
