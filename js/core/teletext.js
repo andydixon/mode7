@@ -211,12 +211,15 @@ this._ensureFontLoaded().then(() => { // Load the font in the background
     this._backdropOn = !this._backdropOn; // Flip
   } // End toggleBackdrop
 
-  setPrintArea(x, y, w, h) { // Set the print area
-    this.area = { x, y, w, h }; // Store
-    this.baseArea = { x, y, w, h }; // Update base
-    this.cursorX = this.area.x; // Reset cursor
-    this.cursorY = this.area.y; // Reset cursor
-    this.forceRedraw(); // Redraw
+  setPrintArea(x, y, w, h) { // Set the print area, clearing the previous screen fully
+    // Clear the entire screen so no old text survives when the window moves or shrinks.
+    this.clearScreen(); // Blank everything and reset attributes/cursor
+
+    this.area = { x, y, w, h }; // Store new area
+    this.baseArea = { x, y, w, h }; // Update base for tighten()
+    this.cursorX = this.area.x; // Reset cursor to new area origin
+    this.cursorY = this.area.y; // Reset cursor to new area origin
+    this.forceRedraw(); // Redraw with the fresh area
   } // End setPrintArea
 
 tighten(step) { // Tighten the print area inward while clearing old text outside the new area

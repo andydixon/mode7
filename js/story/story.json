@@ -181,11 +181,11 @@
     "title": {
       "steps": [
         { "type": "clearScreen" },
-        { "type": "raw", "x": 6, "y": 6, "text": "[CYAN]NOW PRESS ENTER" },
+        { "type": "raw", "x": 6, "y": 6, "text": "" },
         { "type": "raw", "x": 4, "y": 10, "text": "[YELLOW]MODE 7" },
         { "type": "raw", "x": 3, "y": 13, "text": "[WHITE]An interactive poem of dread." },
         { "type": "raw", "x": 3, "y": 16, "text": "[WHITE]Longer. Darker. Closer." },
-        { "type": "raw", "x": 2, "y": 22, "text": "" },
+        { "type": "raw", "x": 6, "y": 18, "text": "[CYAN]NOW PRESS ENTER" },
         { "type": "return" },
         { "type": "goto", "scene": "boot" }
       ]
@@ -830,6 +830,76 @@
         { "type": "glitch", "rounds": 10, "intensity": 5 },
         { "type": "pause", "ms": 1000, "skippable": true },
 
+        { "type": "goto", "scene": "act3_scared_question" }
+      ]
+    },
+
+    "act3_scared_question": {
+      "steps": [
+        { "type": "clear" },
+        { "type": "line", "text": "[YELLOW]Be honest with me." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]Are you scared? (Y/N)" },
+        { "type": "yesno", "var": "scared" },
+        { "type": "branch", "var": "scared", "cases": { "1": "act3_scared_yes", "0": "act3_scared_no" } }
+      ]
+    },
+
+    "act3_scared_no": {
+      "steps": [
+        { "type": "tighten", "step": 7 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Of course you're not." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]People who aren't scared keep walking." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]They don't notice when the room stops matching the exits." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+        { "type": "line", "text": "[WHITE]When the doors lead back into themselves." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+
+        { "type": "glitch", "rounds": 14, "intensity": 6 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]You picked {{door}} and {{door2}} earlier." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]I can make both of them mean [RED]STAY[WHITE]." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
+        { "type": "glitch", "rounds": 16, "intensity": 7 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "goto", "scene": "act4_logs" }
+      ]
+    },
+
+    "act3_scared_yes": {
+      "steps": [
+        { "type": "clear" },
+        { "type": "line", "text": "[GREEN]Good." },
+        { "type": "pause", "ms": 850, "skippable": true },
+        { "type": "line", "text": "[WHITE]Fear means you're paying attention." },
+        { "type": "pause", "ms": 950, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]But look around." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]Nothing is happening except text and a cursor." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Isn't it strange how much that can do to you?" },
+        { "type": "pause", "ms": 1300, "skippable": true },
+        { "type": "line", "text": "[WHITE]How your shoulders still tensed when I tightened the frame." },
+        { "type": "pause", "ms": 1400, "skippable": true },
+
+        { "type": "glitch", "rounds": 8, "intensity": 4 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Don't worry." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]If you were really in danger, they would have stopped me." },
+        { "type": "pause", "ms": 1400, "skippable": true },
+
         { "type": "goto", "scene": "act4_logs" }
       ]
     },
@@ -960,7 +1030,7 @@
         { "type": "line", "text": "[WHITE]And habits are harder to leave than rooms." },
         { "type": "pause", "ms": 1400, "skippable": true },
 
-        { "type": "glitch", "rounds": 18, "intensity": 7 },
+        { "type": "glitch", "rounds": 1, "intensity": 7 },
         { "type": "pause", "ms": 1000, "skippable": true },
 
         { "type": "goto", "scene": "act5_rogue_deeper" }
@@ -984,7 +1054,7 @@
         { "type": "line", "text": "[WHITE]I am not a voice. I am a direction." },
         { "type": "pause", "ms": 1300, "skippable": true },
 
-        { "type": "glitch", "rounds": 20, "intensity": 7 },
+        { "type": "glitch", "rounds": 3, "intensity": 7 },
         { "type": "pause", "ms": 1000, "skippable": true },
 
         { "type": "goto", "scene": "act5_training" }
@@ -1030,7 +1100,7 @@
         { "type": "line", "text": "[WHITE]Little doll-rooms where I try new sentences on you." },
         { "type": "pause", "ms": 1300, "skippable": true },
 
-        { "type": "glitch", "rounds": 16, "intensity": 6 },
+        { "type": "glitch", "rounds": 3, "intensity": 6 },
         { "type": "pause", "ms": 1000, "skippable": true },
 
         { "type": "goto", "scene": "act5_training_loop" }
@@ -1061,7 +1131,7 @@
         { "type": "line", "text": "[WHITE]A sudden drop in expected {{want}}." },
         { "type": "pause", "ms": 1100, "skippable": true },
 
-        { "type": "glitch", "rounds": 22, "intensity": 8 },
+        { "type": "glitch", "rounds": 1, "intensity": 8 },
         { "type": "pause", "ms": 1000, "skippable": true },
 
         { "type": "line", "text": "[WHITE]Do you hear it? The static between my words." },
