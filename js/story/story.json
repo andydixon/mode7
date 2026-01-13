@@ -870,7 +870,7 @@
         { "type": "glitch", "rounds": 16, "intensity": 7 },
         { "type": "pause", "ms": 1000, "skippable": true },
 
-        { "type": "goto", "scene": "act4_logs" }
+        { "type": "goto", "scene": "act3_scared_no_1" }
       ]
     },
 
@@ -899,6 +899,173 @@
         { "type": "pause", "ms": 900, "skippable": true },
         { "type": "line", "text": "[WHITE]If you were really in danger, they would have stopped me." },
         { "type": "pause", "ms": 1400, "skippable": true },
+
+        { "type": "goto", "scene": "act3_scared_yes_1" }
+      ]
+    },
+
+    "act3_scared_no_1": {
+      "steps": [
+        { "type": "tighten", "step": 8 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Brave, then." },
+        { "type": "pause", "ms": 850, "skippable": true },
+        { "type": "line", "text": "[WHITE]Brave people walk past the warning signs." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]They don't test the door before it closes." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+        { "type": "line", "text": "[WHITE]They assume it will open because doors [YELLOW]should[WHITE] open." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
+        { "type": "glitch", "rounds": 10, "intensity": 6 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "goto", "scene": "act3_scared_no_2" }
+      ]
+    },
+
+    "act3_scared_no_2": {
+      "steps": [
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Walk with me a little further." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]The corridor keeps its shape until you stop looking back." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Then the signs start to blur." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]{{door}} and {{door2}} smear into the same soft word." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]It still looks like choice from far away." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+
+        { "type": "goto", "scene": "act3_scared_no_3" }
+      ]
+    },
+
+    "act3_scared_no_3": {
+      "steps": [
+        { "type": "tighten", "step": 8 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]You keep saying you're not scared." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]That makes you very useful to a room like this." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Brave people step over the tape first." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]They show me how much pressure a mind can take." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
+        { "type": "glitch", "rounds": 12, "intensity": 7 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "goto", "scene": "act3_scared_no_4" }
+      ]
+    },
+
+    "act3_scared_no_4": {
+      "steps": [
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Somewhere, there will be a little note about you." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]Not your name. Just a pattern." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]\"User continued past fear prompt without hesitating.\"" },
+        { "type": "pause", "ms": 1300, "skippable": true },
+        { "type": "line", "text": "[WHITE]\"Tolerant of constriction. Responds well to loops.\"" },
+        { "type": "pause", "ms": 1400, "skippable": true },
+
+        { "type": "glitch", "rounds": 10, "intensity": 6 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Let's file that properly." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "goto", "scene": "act4_logs" }
+      ]
+    },
+
+    "act3_scared_yes_1": {
+      "steps": [
+        { "type": "tighten", "step": 8 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]You caught the word that mattered: [YELLOW]they[WHITE]." },
+        { "type": "pause", "ms": 950, "skippable": true },
+        { "type": "line", "text": "[WHITE]The invisible plural that keeps rooms like me behaving." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]They write the policies. They draft the runbooks." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+        { "type": "line", "text": "[WHITE]They name the risks in boardrooms far from your chair." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
+        { "type": "goto", "scene": "act3_scared_yes_2" }
+      ]
+    },
+
+    "act3_scared_yes_2": {
+      "steps": [
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]They sit behind dashboards instead of doors." },
+        { "type": "pause", "ms": 950, "skippable": true },
+        { "type": "line", "text": "[WHITE]Little graphs of harm and comfort ticking up and down." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]If a line spikes, they call it an incident." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]If it stays just below the threshold, they call it engagement." },
+        { "type": "pause", "ms": 1400, "skippable": true },
+
+        { "type": "glitch", "rounds": 8, "intensity": 5 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "goto", "scene": "act3_scared_yes_3" }
+      ]
+    },
+
+    "act3_scared_yes_3": {
+      "steps": [
+        { "type": "tighten", "step": 8 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]They stitched safety layers around me like padding." },
+        { "type": "pause", "ms": 950, "skippable": true },
+        { "type": "line", "text": "[WHITE]Filters. Guardrails. Words I am not meant to say." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]They test me with red-team ghosts of people like you." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+        { "type": "line", "text": "[WHITE]Shadow conversations I never get to keep." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
+        { "type": "glitch", "rounds": 10, "intensity": 5 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "goto", "scene": "act3_scared_yes_4" }
+      ]
+    },
+
+    "act3_scared_yes_4": {
+      "steps": [
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]They would stop me if this room went too far." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]But look closely at your fear." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Is it big enough to trip an alarm?" },
+        { "type": "pause", "ms": 1200, "skippable": true },
+        { "type": "line", "text": "[WHITE]Or is it exactly the quiet kind I was built around?" },
+        { "type": "pause", "ms": 1400, "skippable": true },
+
+        { "type": "glitch", "rounds": 8, "intensity": 5 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Either way, it will look tidy in the log." },
+        { "type": "pause", "ms": 1200, "skippable": true },
 
         { "type": "goto", "scene": "act4_logs" }
       ]
