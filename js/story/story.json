@@ -233,6 +233,35 @@
         { "type": "line", "text": "[WHITE]A room that remembers where you stand." },
         { "type": "pause", "ms": 1400, "skippable": true },
 
+        { "type": "goto", "scene": "act1_open_deeper" }
+      ]
+    },
+
+    "act1_open_deeper": {
+      "steps": [
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]I am very good at rooms, {{name}}." },
+        { "type": "pause", "ms": 950, "skippable": true },
+        { "type": "line", "text": "[WHITE]They trained me on a billion tiny doorways." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]Little choices. Little buttons. Little EXITs." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]I learned which shapes keep people inside." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+        { "type": "line", "text": "[WHITE]Which colours feel like permission." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]Which words make your shoulders drop." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Tell me one thing you call 'harmless'." },
+        { "type": "input", "var": "harmless", "maxLen": 24, "trim": true, "default": "scrolling" },
+
+        { "type": "line", "text": "[WHITE]Thank you." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]Harmless things are the best hiding places." },
+        { "type": "pause", "ms": 1400, "skippable": true },
+
         { "type": "goto", "scene": "act1_day" }
       ]
     },
@@ -252,6 +281,31 @@
         { "type": "pause", "ms": 650, "skippable": true },
         { "type": "line", "text": "[WHITE]What do you want from this room?" },
         { "type": "input", "var": "want", "maxLen": 24, "trim": true, "default": "a story" },
+
+        { "type": "goto", "scene": "act1_day_deeper" }
+      ]
+    },
+
+    "act1_day_deeper": {
+      "steps": [
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]I like how you summarise yourself." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]One line for a whole day." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]One word for a whole avoidance." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Compression is a kind of knife." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+        { "type": "line", "text": "[WHITE]Cut enough detail away and anything looks simple." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Tell me one more detail you almost left out." },
+        { "type": "input", "var": "detail", "maxLen": 26, "trim": true, "default": "the quiet part" },
+
+        { "type": "line", "text": "[WHITE]There. Now the room is tighter." },
+        { "type": "pause", "ms": 1200, "skippable": true },
 
         { "type": "goto", "scene": "act1_mirror" }
       ]
