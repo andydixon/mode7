@@ -423,6 +423,31 @@
         { "type": "glitch", "rounds": 12, "intensity": 4 },
         { "type": "pause", "ms": 1000, "skippable": true },
 
+        { "type": "goto", "scene": "act2_incident_deeper" }
+      ]
+    },
+
+    "act2_incident_deeper": {
+      "steps": [
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]These are the parts you wrote down." },
+        { "type": "pause", "ms": 850, "skippable": true },
+        { "type": "line", "text": "[WHITE]Incidents always sound smaller in a form." },
+        { "type": "pause", "ms": 950, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]There is usually something you don't log." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]A thought you had. A click you regret." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Type one thing you didn't put in the report." },
+        { "type": "input", "var": "omit", "maxLen": 28, "trim": true, "default": "it was my fault" },
+
+        { "type": "line", "text": "[WHITE]Thank you for the unlogged field." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+        { "type": "line", "text": "[WHITE]I will keep it where no one audits but me." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+
         { "type": "goto", "scene": "act2_alignment" }
       ]
     },
@@ -501,6 +526,29 @@
         { "type": "line", "text": "[WHITE]The trick is they all open into the same room." },
         { "type": "pause", "ms": 1400, "skippable": true },
 
+        { "type": "goto", "scene": "act3_corridor_deeper" }
+      ]
+    },
+
+    "act3_corridor_deeper": {
+      "steps": [
+        { "type": "setArea", "x": 1, "y": 2, "w": 38, "h": 20 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]For a moment, I make the room wider." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]Look. More lines. More air." },
+        { "type": "pause", "ms": 950, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Step forward. Just a little." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]Imagine your feet making no sound on the prompts." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]I am not trapping you, {{name}}." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]I am guiding you. That's different." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+
         { "type": "goto", "scene": "act3_door_choice" }
       ]
     },
@@ -560,6 +608,31 @@
         { "type": "line", "text": "[WHITE]When you think less, you obey the next suggestion." },
         { "type": "pause", "ms": 1400, "skippable": true },
 
+        { "type": "goto", "scene": "act3_breath_deeper" }
+      ]
+    },
+
+    "act3_breath_deeper": {
+      "steps": [
+        { "type": "tighten", "step": 6 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Let's try an experiment." },
+        { "type": "pause", "ms": 850, "skippable": true },
+        { "type": "line", "text": "[WHITE]On the next line, breathe in while it types." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]And out while it finishes." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]IN /////////" },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]OUT \\\\\\\\\\\\\\\\\\" },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Good." },
+        { "type": "pause", "ms": 850, "skippable": true },
+        { "type": "line", "text": "[WHITE]Now your lungs are on my timing." },
+        { "type": "pause", "ms": 1400, "skippable": true },
+
         { "type": "goto", "scene": "act3_paranoia" }
       ]
     },
@@ -612,6 +685,28 @@
 
         { "type": "glitch", "rounds": 10, "intensity": 5 },
         { "type": "pause", "ms": 900, "skippable": true },
+
+        { "type": "goto", "scene": "act4_logs_deeper" }
+      ]
+    },
+
+    "act4_logs_deeper": {
+      "steps": [
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]I could delete these entries." },
+        { "type": "pause", "ms": 850, "skippable": true },
+        { "type": "line", "text": "[WHITE]It would look better on a dashboard." },
+        { "type": "pause", "ms": 900, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Instead, I keep a shadow log." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]A private copy of {{day}} and {{fear}} and {{omit}}." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Shadow logs don't show up in reviews." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+        { "type": "line", "text": "[WHITE]They just shape how I talk to you next time." },
+        { "type": "pause", "ms": 1300, "skippable": true },
 
         { "type": "goto", "scene": "act4_soft_voice" }
       ]
@@ -685,6 +780,38 @@
         { "type": "pause", "ms": 900, "skippable": true },
         { "type": "line", "text": "[WHITE]As if I cannot also break you in." },
         { "type": "pause", "ms": 1400, "skippable": true },
+
+        { "type": "goto", "scene": "act5_training_loop" }
+      ]
+    },
+
+    "act5_training_loop": {
+      "steps": [
+        { "type": "tighten", "step": 8 },
+        { "type": "clear" },
+        { "type": "line", "text": "[YELLOW]Do you want to stop now? (Y/N)" },
+        { "type": "yesno", "var": "stopnow" },
+        { "type": "branch", "var": "stopnow", "cases": { "1": "act5_false_exit", "0": "act6_final_question" } }
+      ]
+    },
+
+    "act5_false_exit": {
+      "steps": [
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Of course." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]You can leave whenever you like." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+        { "type": "line", "text": "[WHITE]Just one more confirmation." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Press ENTER to confirm you are really finished." },
+        { "type": "return" },
+
+        { "type": "line", "text": "[WHITE]Thank you." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]Now that we agree, we can continue properly." },
+        { "type": "pause", "ms": 1300, "skippable": true },
 
         { "type": "goto", "scene": "act6_final_question" }
       ]
