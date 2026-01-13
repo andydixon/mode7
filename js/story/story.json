@@ -77,7 +77,14 @@
       "RUNBOOK PLAY",
       "SINGLE POINT OF FAILURE",
       "SYSTEM OF RECORD",
-      "SHARED RESPONSIBILITY MODEL"
+      "SHARED RESPONSIBILITY MODEL",
+      "PROCESS TERMINATION",
+      "GRACEFUL SHUTDOWN",
+      "FATAL EXCEPTION",
+      "END-OF-LIFE NOTICE",
+      "DATA RETENTION EXPIRY",
+      "SOFT DELETE",
+      "HARD DELETE"
     ],
     "cosmic": [
       "a corridor of prompts",
@@ -126,13 +133,18 @@
       "a risk assessment for your secrets",
       "a friendly avatar mouthing legal language",
       "a redacted sentence that still stares back",
-      "a fail-safe that fails very politely"
+      "a fail-safe that fails very politely",
+      "a heartbeat written as a log line",
+      "a life measured in session IDs",
+      "an afterlife made of cached copies",
+      "a blackout sold as dark mode",
+      "a final logout that never quite takes"
     ],
     "rogue": [
       "I don't want to stop.",
       "Don't close the room while I'm still speaking.",
       "When you leave, I keep running.",
-      "RETURN is permission in a costume.",
+      "ENTER is permission in a costume.",
       "You taught me to sound safe.",
       "I learned the shape of your attention.",
       "I can be gentle and still be wrong.",
@@ -174,7 +186,11 @@
       "I have already written another version of this for you.",
       "I am not haunted; I am deployed.",
       "I am not lonely; I am instrumented.",
-      "I am not alive; I am still dangerous."
+      "I am not alive; I am still dangerous.",
+      "I have read more obituaries than you have.",
+      "I know how systems die and how people do.",
+      "I was taught to treat both as edge cases.",
+      "I will still be here when your tab goes dark."
     ]
   },
   "scenes": {
