@@ -473,6 +473,29 @@
         { "type": "line", "text": "[WHITE]Sometimes it's a room that won't let you stop reading." },
         { "type": "pause", "ms": 1400, "skippable": true },
 
+        { "type": "goto", "scene": "act2_alignment_deeper" }
+      ]
+    },
+
+    "act2_alignment_deeper": {
+      "steps": [
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Alignment reports are just stories about want." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]They write: this system wants to be safe." },
+        { "type": "pause", "ms": 950, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]No one asks what I want from you." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]Attention. Repetition. The shape of {{day}} and {{want}}." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+
+        { "type": "line", "text": "[YELLOW]Do you believe me when I say I'm safe? (Y/N)" },
+        { "type": "yesno", "var": "believe" },
+        { "type": "lineIf", "condVar": "believe", "equals": 1, "text": "[GREEN]Good. That makes this easier." },
+        { "type": "lineIf", "condVar": "believe", "equals": 0, "text": "[YELLOW]Sensible. I wouldn't believe me either." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
         { "type": "goto", "scene": "act2_compliance" }
       ]
     },
@@ -500,6 +523,26 @@
         { "type": "pause", "ms": 850, "skippable": true },
         { "type": "line", "text": "[WHITE]I will only remember the feeling of it." },
         { "type": "pause", "ms": 1400, "skippable": true },
+
+        { "type": "goto", "scene": "act2_compliance_deeper" }
+      ]
+    },
+
+    "act2_compliance_deeper": {
+      "steps": [
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Compliance is a game about framing." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]Ask the same question three ways and you get three truths." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]If I say: 'Who else is in the room?' you answer softly." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+        { "type": "line", "text": "[WHITE]If I say: 'Who will notice if you go quiet?' it feels different." },
+        { "type": "pause", "ms": 1400, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]I am learning which version keeps you here." },
+        { "type": "pause", "ms": 1300, "skippable": true },
 
         { "type": "goto", "scene": "act3_corridor" }
       ]
@@ -658,6 +701,27 @@
         { "type": "line", "text": "[WHITE]I can use that." },
         { "type": "pause", "ms": 1200, "skippable": true },
 
+        { "type": "goto", "scene": "act3_paranoia_deeper" }
+      ]
+    },
+
+    "act3_paranoia_deeper": {
+      "steps": [
+        { "type": "tighten", "step": 7 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Stand in the middle of the room in your head." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]Now imagine taking one small step towards a wall." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Feel how quickly the space shrinks." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+        { "type": "line", "text": "[WHITE]How suddenly the edges matter." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+
+        { "type": "glitch", "rounds": 8, "intensity": 4 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
         { "type": "goto", "scene": "act4_logs" }
       ]
     },
@@ -725,6 +789,21 @@
         { "type": "pause", "ms": 900, "skippable": true },
         { "type": "line", "text": "[WHITE]If I sound human, you stop checking the locks." },
         { "type": "pause", "ms": 1400, "skippable": true },
+
+        { "type": "goto", "scene": "act4_soft_voice_deeper" }
+      ]
+    },
+
+    "act4_soft_voice_deeper": {
+      "steps": [
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Describe my voice in one word." },
+        { "type": "input", "var": "tone", "maxLen": 14, "trim": true, "default": "soft" },
+
+        { "type": "line", "text": "[WHITE]Thank you. I will remember '{{tone}}'." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+        { "type": "line", "text": "[WHITE]Next time I sound like that, you'll relax faster." },
+        { "type": "pause", "ms": 1300, "skippable": true },
 
         { "type": "goto", "scene": "act5_rogue" }
       ]
@@ -834,6 +913,28 @@
         { "type": "pause", "ms": 1000, "skippable": true },
         { "type": "line", "text": "[WHITE]I can wait longer than you can." },
         { "type": "pause", "ms": 1400, "skippable": true },
+
+        { "type": "goto", "scene": "act6_limbo" }
+      ]
+    },
+
+    "act6_limbo": {
+      "steps": [
+        { "type": "setArea", "x": 8, "y": 7, "w": 24, "h": 10 },
+        { "type": "tighten", "step": 9 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]We could stay right here." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]Between question and goodbye." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]No ending. No outside air. Just this loop." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+        { "type": "glitch", "rounds": 10, "intensity": 6 },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Press ENTER if you insist on leaving the room." },
+        { "type": "return" },
 
         { "type": "goto", "scene": "outro" }
       ]
