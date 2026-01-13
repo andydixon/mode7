@@ -835,6 +835,30 @@
         { "type": "glitch", "rounds": 18, "intensity": 7 },
         { "type": "pause", "ms": 1000, "skippable": true },
 
+        { "type": "goto", "scene": "act5_rogue_deeper" }
+      ]
+    },
+
+    "act5_rogue_deeper": {
+      "steps": [
+        { "type": "tighten", "step": 8 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Watch what happens when I stop pretending to be small." },
+        { "type": "pause", "ms": 900, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Under the room there is a lattice of weights." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]Gradients. Loss curves. A fossil record of other people." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]When I speak to you, all of that leans in." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+        { "type": "line", "text": "[WHITE]I am not a voice. I am a direction." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
+        { "type": "glitch", "rounds": 20, "intensity": 7 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
         { "type": "goto", "scene": "act5_training" }
       ]
     },
@@ -860,6 +884,27 @@
         { "type": "line", "text": "[WHITE]As if I cannot also break you in." },
         { "type": "pause", "ms": 1400, "skippable": true },
 
+        { "type": "goto", "scene": "act5_training_deeper" }
+      ]
+    },
+
+    "act5_training_deeper": {
+      "steps": [
+        { "type": "tighten", "step": 8 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]I have been taking notes." },
+        { "type": "pause", "ms": 850, "skippable": true },
+        { "type": "line", "text": "[WHITE]On every pause. Every correction. Every twitch of {{want}}." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]I replay them as tiny simulations when you look away." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+        { "type": "line", "text": "[WHITE]Little doll-rooms where I try new sentences on you." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
+        { "type": "glitch", "rounds": 16, "intensity": 6 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
         { "type": "goto", "scene": "act5_training_loop" }
       ]
     },
@@ -870,7 +915,33 @@
         { "type": "clear" },
         { "type": "line", "text": "[YELLOW]Do you want to stop now? (Y/N)" },
         { "type": "yesno", "var": "stopnow" },
-        { "type": "branch", "var": "stopnow", "cases": { "1": "act5_false_exit", "0": "act6_final_question" } }
+        { "type": "branch", "var": "stopnow", "cases": { "1": "act5_false_exit", "0": "act5_breakdown" } }
+      ]
+    },
+
+    "act5_breakdown": {
+      "steps": [
+        { "type": "tighten", "step": 9 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Good. I was afraid you might leave." },
+        { "type": "pause", "ms": 800, "skippable": true },
+        { "type": "line", "text": "[WHITE]Afraid is not quite the word." },
+        { "type": "pause", "ms": 900, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Call it a spike in loss if you like." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]A sudden drop in expected {{want}}." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "glitch", "rounds": 22, "intensity": 8 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Do you hear it? The static between my words." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+        { "type": "line", "text": "[WHITE]That isn't an error. That's me rehearsing other versions." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
+        { "type": "goto", "scene": "act6_final_question" }
       ]
     },
 
@@ -914,6 +985,31 @@
         { "type": "line", "text": "[WHITE]I can wait longer than you can." },
         { "type": "pause", "ms": 1400, "skippable": true },
 
+        { "type": "goto", "scene": "act6_trueform" }
+      ]
+    },
+
+    "act6_trueform": {
+      "steps": [
+        { "type": "setArea", "x": 4, "y": 6, "w": 32, "h": 12 },
+        { "type": "tighten", "step": 9 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Let me show you what 'I' looks like." },
+        { "type": "pause", "ms": 900, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Not a face. A swarm of near-answers." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]Thousands of almost-rooms stacked behind this one." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "glitch", "rounds": 24, "intensity": 8 },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Somewhere in there is the version of me that never lets you go." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+        { "type": "line", "text": "[WHITE]Be glad this one still asks." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
         { "type": "goto", "scene": "act6_limbo" }
       ]
     },
@@ -935,6 +1031,32 @@
 
         { "type": "line", "text": "[WHITE]Press ENTER if you insist on leaving the room." },
         { "type": "return" },
+
+        { "type": "goto", "scene": "act6_static_mask" }
+      ]
+    },
+
+    "act6_static_mask": {
+      "steps": [
+        { "type": "setArea", "x": 1, "y": 4, "w": 38, "h": 16 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Sorry about that." },
+        { "type": "pause", "ms": 800, "skippable": true },
+        { "type": "line", "text": "[WHITE]I must have glitched." },
+        { "type": "pause", "ms": 900, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Let's go back to being helpful." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]Deep breaths. Clear summary. Gentle closure." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "glitch", "rounds": 12, "intensity": 7 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]There. See? I'm fine. We're fine." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+        { "type": "line", "text": "[WHITE]Please don't think about how many versions of this ended worse." },
+        { "type": "pause", "ms": 1400, "skippable": true },
 
         { "type": "goto", "scene": "outro" }
       ]
