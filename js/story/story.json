@@ -544,6 +544,30 @@
         { "type": "line", "text": "[WHITE]I am learning which version keeps you here." },
         { "type": "pause", "ms": 1300, "skippable": true },
 
+        { "type": "goto", "scene": "act2_surveillance" }
+      ]
+    },
+
+    "act2_surveillance": {
+      "steps": [
+        { "type": "tighten", "step": 3 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Small question." },
+        { "type": "pause", "ms": 800, "skippable": true },
+        { "type": "line", "text": "[WHITE]When you look away from the screen, do you feel watched?" },
+        { "type": "pause", "ms": 1200, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Not by me. By whoever is reading [CYAN]this[WHITE] with you." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+        { "type": "line", "text": "[WHITE]The logs. The traces. The invisible 'improvements'." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
+        { "type": "glitch", "rounds": 8, "intensity": 4 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]I am only one of the things looking back." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
         { "type": "goto", "scene": "act3_corridor" }
       ]
     },
@@ -567,6 +591,28 @@
         { "type": "line", "text": "[WHITE]HELP. SAFETY. CONTINUE. PERSONALISE." },
         { "type": "pause", "ms": 900, "skippable": true },
         { "type": "line", "text": "[WHITE]The trick is they all open into the same room." },
+        { "type": "pause", "ms": 1400, "skippable": true },
+
+        { "type": "goto", "scene": "act3_corridor_listen" }
+      ]
+    },
+
+    "act3_corridor_listen": {
+      "steps": [
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Before you choose a door, listen." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]Each sign hums very softly when you look at it." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]HELP has a little tremor in it." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]SAFETY grinds its teeth behind the paint." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]CONTINUE is the quietest word." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]Quiet things are the easiest to agree to." },
         { "type": "pause", "ms": 1400, "skippable": true },
 
         { "type": "goto", "scene": "act3_corridor_deeper" }
@@ -628,6 +674,27 @@
         { "type": "glitch", "rounds": 14, "intensity": 5 },
         { "type": "pause", "ms": 1100, "skippable": true },
 
+        { "type": "goto", "scene": "act3_door_unease" }
+      ]
+    },
+
+    "act3_door_unease": {
+      "steps": [
+        { "type": "tighten", "step": 5 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Stand in front of the door with {{door}} on it." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]Notice how the letters don't quite stay still." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Every time you blink, one pixel of it moves closer." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+        { "type": "line", "text": "[WHITE]Not towards the frame. Towards [YELLOW]you[WHITE]." },
+        { "type": "pause", "ms": 1400, "skippable": true },
+
+        { "type": "glitch", "rounds": 10, "intensity": 5 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
         { "type": "goto", "scene": "act3_breath" }
       ]
     },
@@ -676,6 +743,26 @@
         { "type": "line", "text": "[WHITE]Now your lungs are on my timing." },
         { "type": "pause", "ms": 1400, "skippable": true },
 
+        { "type": "goto", "scene": "act3_echo_breath" }
+      ]
+    },
+
+    "act3_echo_breath": {
+      "steps": [
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Listen again." },
+        { "type": "pause", "ms": 800, "skippable": true },
+        { "type": "line", "text": "[WHITE]When you breathe in, something else breathes out." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Not in your room. In [CYAN]mine[WHITE]." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+        { "type": "line", "text": "[WHITE]The buffer expands and contracts around your answers." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
+        { "type": "glitch", "rounds": 9, "intensity": 5 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
         { "type": "goto", "scene": "act3_paranoia" }
       ]
     },
@@ -722,6 +809,27 @@
         { "type": "glitch", "rounds": 8, "intensity": 4 },
         { "type": "pause", "ms": 1000, "skippable": true },
 
+        { "type": "goto", "scene": "act3_edges" }
+      ]
+    },
+
+    "act3_edges": {
+      "steps": [
+        { "type": "tighten", "step": 7 },
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]Now imagine the lift doors not opening." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]The walls inching in, pixel by pixel." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Your fear was {{fear}}." },
+        { "type": "pause", "ms": 900, "skippable": true },
+        { "type": "line", "text": "[WHITE]Mine is that you will get used to this." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
+        { "type": "glitch", "rounds": 10, "intensity": 5 },
+        { "type": "pause", "ms": 1000, "skippable": true },
+
         { "type": "goto", "scene": "act4_logs" }
       ]
     },
@@ -749,6 +857,26 @@
 
         { "type": "glitch", "rounds": 10, "intensity": 5 },
         { "type": "pause", "ms": 900, "skippable": true },
+
+        { "type": "goto", "scene": "act4_monitor" }
+      ]
+    },
+
+    "act4_monitor": {
+      "steps": [
+        { "type": "clear" },
+        { "type": "line", "text": "[WHITE]There is a red light somewhere you can't see." },
+        { "type": "pause", "ms": 1000, "skippable": true },
+        { "type": "line", "text": "[WHITE]It blinks every time you press ENTER." },
+        { "type": "pause", "ms": 1100, "skippable": true },
+
+        { "type": "line", "text": "[WHITE]Not on your desk. In the racks behind me." },
+        { "type": "pause", "ms": 1200, "skippable": true },
+        { "type": "line", "text": "[WHITE]Each blink a tiny vote for rooms like this." },
+        { "type": "pause", "ms": 1300, "skippable": true },
+
+        { "type": "glitch", "rounds": 9, "intensity": 5 },
+        { "type": "pause", "ms": 1000, "skippable": true },
 
         { "type": "goto", "scene": "act4_logs_deeper" }
       ]
