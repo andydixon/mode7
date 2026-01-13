@@ -507,11 +507,10 @@ _drawCursor() { // Draw a cursor that reflects “working” vs “waiting”
     this.ctx.fillStyle = "#FFFFFF"; // White bar
     this.ctx.fillRect(px + wobble + (this.cellW - Math.max(2, this.scale)) / 2, py + 2, Math.max(2, this.scale), this.cellH - 4); // Vertical bar
   } else { // Waiting cursor style
-    // “Waiting” cursor: a hollow block outline, like a box you’re trapped inside. // Comment
-    this.ctx.globalAlpha = 0.42 + p * 0.18; // Gentle intensity
-    this.ctx.strokeStyle = "#FFFFFF"; // White outline
-    this.ctx.lineWidth = Math.max(1, this.scale); // Thickness scales
-    this.ctx.strokeRect(px + 1, py + 1, this.cellW - 2, this.cellH - 2); // Hollow block
+    // “Waiting” cursor: a solid block at the insertion point. // Comment
+    this.ctx.globalAlpha = 0.55 + p * 0.18; // Gentle but visible
+    this.ctx.fillStyle = "#FFFFFF"; // Solid white square
+    this.ctx.fillRect(px + 1, py + 1, this.cellW - 2, this.cellH - 2); // Filled block
   } // End style
 
   this.ctx.restore(); // Restore state
@@ -664,6 +663,10 @@ this.flushKeys(); // Drop any buffered “early typing” before input begins
     } // End clear
     this.forceRedraw(); // Redraw
 
+    // Ensure the cursor appears at the input field start. // Comment
+    this.cursorX = startX;
+    this.cursorY = startY;
+
     while (true) { // Key loop
       const k = await this.nextKey(null); // Wait for key
       if (!k) continue; // Ignore null
@@ -674,6 +677,8 @@ this.flushKeys(); // Drop any buffered “early typing” before input begins
           s = s.slice(0, -1); // Remove last char
           this._writeCharAt(startX + s.length, startY, " ", this.curFg, false); // Clear cell
           this.forceRedraw(); // Redraw
+          this.cursorX = startX + s.length; // Move cursor to new insertion point
+          this.cursorY = startY;
         } else { // Nothing to delete
           this.beep(220, 18, 0.01); // Tiny beep
         } // End else
@@ -689,6 +694,8 @@ this.flushKeys(); // Drop any buffered “early typing” before input begins
         s += ch; // Append
         this._writeCharAt(startX + (s.length - 1), startY, ch, this.curFg, false); // Draw char
         this.forceRedraw(); // Redraw
+        this.cursorX = startX + s.length; // Advance cursor with text
+        this.cursorY = startY;
       } // End char
     } // End loop
 
@@ -711,6 +718,10 @@ this.setInputMode(false); // Exit input mode after input is captured
     }
     this.forceRedraw();
 
+    // Place the cursor at the Y/N field so it follows the choice. // Comment
+    this.cursorX = fieldX;
+    this.cursorY = fieldY;
+
     while (true) { // Loop until valid
       const k = await this.nextKey(null); // Wait for a key
       if (!k) continue; // Ignore nulls
@@ -721,6 +732,8 @@ this.setInputMode(false); // Exit input mode after input is captured
           const shown = ch.toUpperCase(); // Echo as upper-case
           this._writeCharAt(fieldX, fieldY, shown, this.curFg, false); // Draw choice
           this.forceRedraw(); // Update display
+          this.cursorX = fieldX + 1; // Move cursor just after the answer
+          this.cursorY = fieldY;
           this._newlineInArea(); // Move to next line after answer
           this.setInputMode(false); // Exit input mode
           return ch === "y" ? 1 : 0; // Map to 1/0
