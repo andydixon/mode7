@@ -196,7 +196,10 @@ html, body {
   .crt-shell {
     width: 100%;
     max-width: 100%;
-    aspect-ratio: 4 / 3;
+    /* Fill the vertical space above the on-screen keyboard */
+    height: calc(100vh - 280px);
+    max-height: calc(100vh - 200px);
+    aspect-ratio: auto;
     border-radius: 12px;
     padding: 8px;
     box-shadow:
@@ -228,6 +231,8 @@ html, body {
   .crt-shell {
     border-radius: 8px;
     padding: 6px;
+    height: calc(100vh - 260px);
+    max-height: calc(100vh - 190px);
   }
 
   .crt-overlay {
