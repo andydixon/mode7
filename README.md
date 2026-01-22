@@ -510,7 +510,7 @@ To add new step types:
 ### Performance
 
 - Offscreen canvas rendering for text layer
-- Requestanimationframe-based render loop
+- RequestAnimationFrame-based render loop
 - Minimal DOM manipulation
 - Efficient character-by-character typewriter effect
 
