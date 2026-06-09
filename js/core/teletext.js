@@ -80,6 +80,7 @@ export class TeletextTerminal { // Export the terminal class
 
     this._keyQueue = []; // Key event queue
     this._keyWaiters = []; // Promises waiting for a key
+    this._maxKeyQueue = 64; // Bound buffered input so key repeat cannot grow memory indefinitely
 
     this._audioCtx = null; // AudioContext (lazy)
     this._muted = false; // Mute flag
@@ -806,6 +807,9 @@ this.setInputMode(false); // Exit input mode after input is captured
 
 _pushKey(evt) { // Push a key event into the queue or resolve a waiter
 
+if (!evt || !["enter", "backspace", "char"].includes(evt.type)) return; // Reject malformed events
+if (evt.type === "char" && (typeof evt.ch !== "string" || evt.ch.length !== 1)) return; // Require one character
+
 if (evt && evt.type === "enter") { // Enter triggers fast-forward
   this._fastForward = true; // Enable fast-forward
   this._fastForwardUntil = Date.now() + this._fastForwardMs; // Set expiry
@@ -821,6 +825,7 @@ if (evt && evt.type === "enter") { // Enter triggers fast-forward
     return; // Done
   } // End waiter path
 
+  if (this._keyQueue.length >= this._maxKeyQueue) this._keyQueue.shift(); // Discard oldest buffered input
   this._keyQueue.push(evt); // Otherwise queue it for later
 } // End _pushKey
 
